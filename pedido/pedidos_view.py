@@ -4,7 +4,7 @@ from .logic import pedidos_logic as pl
 
 
 
-def pedidos_view(request):
+def pedido_estado_view(request, pk:int):
     if request.method == 'GET':
-        pedidos = pl.get_pedidos()
-        return JsonResponse(pedidos, safe=False)
+        pedidos = pl.get_pedido_estado(pk)
+        return JsonResponse(pedidos)

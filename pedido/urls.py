@@ -3,5 +3,5 @@ from django.contrib import admin
 from . import pedidos_view
 
 urlpatterns = [
-    path('pedidos/estados/', pedidos_view.pedidos_view, name='pedidos-estados'),
+    path('pedidos/<int:pk>/estados/', pedidos_view.pedido_estado_view, name='pedidos-estados'),
 ]
